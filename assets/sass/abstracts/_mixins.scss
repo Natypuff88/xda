@@ -1,0 +1,61 @@
+@mixin texto_nav {
+    font-family: $raleway;
+    font-weight: $raleway-bold;
+    font-weight: $large;
+    width: 150px;
+}
+
+@mixin texto_titulo {
+    font-family: $old-standard;
+    font-weight: $old-std-bold;
+    font-size: $xx-large;
+    text-transform: uppercase;
+    
+}
+
+@mixin texto_ordinario {
+    font-family: $raleway;
+    font-weight: $raleway-regular;
+    font-weight: $large;
+    line-height : 25px;
+}
+
+
+@mixin boton {
+width: 100px;
+height: 40px;
+background-color: $white;
+border: 1px $smocky-black solid;
+color: $smocky-black;
+}
+
+@mixin texto_newsletter{
+    font-family: $old-standard;
+    font-weight: $old-std-bold;
+    font-size: $large;
+    color: $white;
+}
+
+@mixin texto_label{
+    font-family: $old-standard;
+    font-weight: $old-std-regular;
+    font-size: $medium;
+    color: $white;
+}
+
+@mixin box_input{
+   width: 230px;
+   height: 20px;
+   background-color: $white;
+   padding: 10px;
+}
+
+@mixin texto_suscribete{
+    font-family: $old-standard;
+    font-weight: $old-std-bold;
+    font-size: $large;
+    color: $smocky-black;
+ }
+
+ 
+ 

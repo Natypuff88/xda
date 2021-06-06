@@ -1,0 +1,193 @@
+.main__image{
+    width: 100%;
+    height: auto;
+
+    &__photo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.main{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__info{
+    text-align: left;
+    width: 80%;
+    height: auto; 
+    margin: auto;
+    padding: 20px;
+    }
+
+    &__title{
+        @include texto_titulo; 
+        text-align: left;
+        width: 100%;
+        height: auto;
+     
+    }
+
+    &__paragraph{
+        @include texto_ordinario;
+        text-align: left;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__button{
+        @include boton;
+        margin-top: 20px;
+        &:hover {
+           
+            border: 1px solid $quick-silver;
+          }
+        
+          &:focus {
+            color: $quick-silver;
+            border: 2px solid $quick-silver;
+          }
+    }
+}
+
+.newsletter{
+    display: inline-flex;
+    width: 100%;
+    background-color: $smocky-black;
+
+    &__box-one{
+        width: 90%
+    }
+
+    &__box-two{
+        background-color: $white;
+        margin: 0;
+        width: 50px
+      
+    }
+
+    &__title{
+        @include texto_newsletter;
+       padding-left: 30px;
+       padding-top: 20px;
+       padding-bottom: 10px;
+    }
+
+    &__label{
+        @include texto_label;
+        padding-left: 30px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        color: $white;
+    }
+
+    &__input{
+        @include box_input;
+        display: block;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+
+    &__suscribe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:flex-start;
+        width: 100%;
+        height: 160px;
+   
+
+        p{ 
+            @include texto_suscribete;
+            width: 100%;
+            transform: rotate(-270deg);
+            text-align: center;
+            margin: 0;
+        }
+   
+      }
+}
+
+@media only screen and (min-width: 992px){
+
+    .main{
+        display: grid;
+        grid-template-rows: 1fr ;
+        grid-template-columns: 5fr 7fr;
+        grid-template-areas:
+        "area1 area2";
+    }
+
+    .main__image{
+        height: 100%;
+        grid-area: area2;
+    }
+
+    .main__two{
+        grid-area: area1;
+    }
+
+    .main__info{
+       height:64%;
+       align-content: center;
+       justify-content: center;
+    }
+
+    .main__title{
+        padding-top: 20px;
+        font-size: $xxx-large;
+    }
+    .main__paragraph {
+        width: 250px;
+        font-size: $x-large;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .main__button{
+        width: 200px;
+        height: 60px;
+        font-size: $x-large;
+        margin-top: 0;
+    }
+
+    .newsletter{
+        height: 30%;
+    }    
+
+    .newsletter__title {
+        font-size: $xx-large;
+        padding-left: 100px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+   
+    }
+
+    .newsletter__label{
+        font-size: $x-large;
+        padding-left: 100px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .newsletter__input {
+        font-size: $x-large;
+        margin-left: 100px;
+        width: 300px;
+        font-size: 16px;
+    }
+
+    
+    .newsletter__suscribe p {
+       font-size: 25px;
+    }
+
+  
+}
